@@ -1,11 +1,15 @@
 import React from 'react';
+import PokemonList from './pages/pokemons-list';
+
 
 
 function App() {
+  
+
   return (
-    <div className="App">
-      hello man
-    </div>
+    <>
+      <PokemonList />
+    </>
   );
 }
 
