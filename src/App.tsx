@@ -2,7 +2,7 @@ import React from 'react';
 import PokemonList from './pages/pokemons-list';
 import PokemonsDetail from './pages/pokemon-detail';
 import { BrowserRouter as Router,Route,  Routes,Link } from 'react-router-dom';
-
+import PageNotFound from './pages/page-not-found';
 
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
             <Route  path='/' element={<PokemonList/>} />
             <Route  path='/pokemons' element={<PokemonList/>} />
             <Route  path='/pokemons/:id' element={<PokemonsDetail/>} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </div>
     </Router>

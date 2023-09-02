@@ -22,9 +22,6 @@ const PokemonCard:FunctionComponent<Props> = ({pokemon,borderColor='#009688'}) =
         setColor('#f5f5f5');
     }
 
-   
-
-   
     return (
       <Link to={`/pokemons/${pokemon.id}`}>
           <div className="col s6 m4" onMouseEnter={showBorder} onMouseLeave={hideBorder}>
