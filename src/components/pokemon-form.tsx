@@ -3,6 +3,7 @@ import Pokemon from '../models/pokemon';
 
 import formatType from '../helpers/format-types';
 import { useNavigate } from 'react-router';
+import PokemonService from '../services/pokemon-service';
 
   
 type Props = {
@@ -69,7 +70,11 @@ const PokemonForm: FunctionComponent<Props> = ({pokemon}) => {
     e.preventDefault();
     const isFormValid = validateForm()
     if(isFormValid){
-      history(`/pokemons/${pokemon.id}`);
+      pokemon.name = form.name.value;
+      pokemon.hp = form.hp.value;
+      pokemon.cp = form.cp.value;
+      pokemon.types = form.types.value;
+      PokemonService.upadatePokemon(pokemon).then(() => history(`/pokemons/${pokemon.id}`));
     }
    
     
