@@ -115,6 +115,19 @@
       "types": [
         "Feu"
       ]
+    },
+    {
+      "id": 1694286245465,
+      "hp": "101",
+      "cp": "9",
+      "name": "teac",
+      "picture": "https://assets.pokemon.com/asset/cms2/img/pokedex/detail/120",
+      "types": [
+        "Normal",
+        "Electrik",
+        "Vol"
+      ],
+      "created": "2023-09-09T19:04:05.465Z"
     }
   ]
 }

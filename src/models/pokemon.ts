@@ -7,7 +7,7 @@ export default class Pokemon {
     types: Array<string>;
     created: Date;
 
-    constructor(id: number, hp: number=100, cp: number=10,name: string='name',  picture:string='http://...', types: Array<string> = ['Normal'], created:Date = new Date()){
+    constructor(id: number, hp: number=100, cp: number=10,name: string='',  picture:string='https://assets.pokemon.com/asset/cms2/img/pokedex/detail/', types: Array<string> = ['Normal'], created:Date = new Date()){
         this.id =id;
         this.hp =hp;
         this.cp  = cp;
