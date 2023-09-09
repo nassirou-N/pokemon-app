@@ -17,13 +17,22 @@ export default class PokemonService {
       .catch(error => this.handleError(error));
   }
 
-  static upadatePokemon(pokemon:Pokemon) {
+  static upadatePokemon(pokemon:Pokemon): Promise<Pokemon> {
     return fetch(`http://localhost:3001/pokemons/${pokemon.id}`,{
         method: 'PUT',
         body: JSON.stringify(pokemon),
         headers: {'Content-Type':'application/json'}
     })
-    .then(response => response.json)
+    .then(response => response.json())
+    .catch(error => this.handleError(error));
+  }
+
+  static deletePokemon(pokemon:Pokemon): Promise<{}>{
+    return fetch(`http://localhost:3001/pokemons/${pokemon.id}`,{
+        method: 'DELETE',
+        headers: {'Content-Type':'application/json'}
+    })
+    .then(response => response.json())
     .catch(error => this.handleError(error));
   }
  
@@ -33,6 +42,6 @@ export default class PokemonService {
 
   static handleError(error:Error): void {
     console.log(error);
-    
+
   } 
 }
